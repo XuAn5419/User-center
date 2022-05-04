@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaoliu.usercenter.mapper.CarMapper">
+
+    <resultMap id="BaseResultMap" type="com.xiaoliu.usercenter.model.domain.Car">
+            <id property="carId" column="carId" jdbcType="INTEGER"/>
+            <result property="carNum" column="carNum" jdbcType="VARCHAR"/>
+            <result property="useLastTime" column="useLastTime" jdbcType="TIMESTAMP"/>
+            <result property="carModel" column="carModel" jdbcType="VARCHAR"/>
+            <result property="carStatus" column="carStatus" jdbcType="INTEGER"/>
+            <result property="remainOil" column="remainOil" jdbcType="INTEGER"/>
+            <result property="rentId" column="rentId" jdbcType="INTEGER"/>
+            <result property="rentName" column="rentName" jdbcType="VARCHAR"/>
+            <result property="carLocation" column="carLocation" jdbcType="VARCHAR"/>
+            <result property="carPhoto" column="carPhoto" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        carId,carNum,useLastTime,
+        carModel,carStatus,remainOil,
+        rentId,rentName,carLocation,
+        carPhoto
+    </sql>
+</mapper>
